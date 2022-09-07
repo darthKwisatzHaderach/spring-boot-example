@@ -3,7 +3,7 @@ package ru.workshop.api.models;
 import java.util.UUID;
 
 public class Book {
-    private final String id;
+    private String id;
     private String title;
     private String author;
 
@@ -15,6 +15,10 @@ public class Book {
 
     public Book(String title, String author) {
         this(UUID.randomUUID().toString(), title, author);
+    }
+
+    public Book() {
+
     }
 
     public String getId() {
